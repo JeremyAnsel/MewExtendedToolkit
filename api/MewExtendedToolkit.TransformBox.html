@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class TransformBox </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class TransformBox ">
+    
+    <meta name="description" content="Decorator that applies a composed Matrix3x2 transform before rendering the child. Transform order: Translate(-origin) → Scale → Rotate → Translate(+origin + offset). Origin is relative (0.0–1.0) to the content bounds; defaults to center (0.5, 0.5).">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.json">
+      <meta property="docfx:tocrel" content="toc.json">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../api/index.html" title="Api Documentation">Api Documentation</a>
+                      </li>
+                      <li>
+                          <a href="https://github.com/JeremyAnsel/MewExtendedToolkit" title="Source Code">Source Code</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="MewExtendedToolkit.html" title="MewExtendedToolkit" class="">MewExtendedToolkit</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="MewExtendedToolkit.AboutBox.html" title="AboutBox" class="">AboutBox</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.AboutBoxExtensions.html" title="AboutBoxExtensions" class="">AboutBoxExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.InputBox.html" title="InputBox" class="">InputBox</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.ObservableValueExtensions.html" title="ObservableValueExtensions" class="">ObservableValueExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.SharpAppProperties.html" title="SharpAppProperties" class="">SharpAppProperties</a>
+                          </li>
+                          <li class="active">
+                            <a href="MewExtendedToolkit.TransformBox.html" title="TransformBox" class="active">TransformBox</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.TransformBoxExtensions.html" title="TransformBoxExtensions" class="">TransformBoxExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.Wizard.html" title="Wizard" class="">Wizard</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.WizardExtensions.html" title="WizardExtensions" class="">WizardExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.WizardPage.html" title="WizardPage" class="">WizardPage</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.WizardPageExtensions.html" title="WizardPageExtensions" class="">WizardPageExtensions</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="MewExtendedToolkit.Html.html" title="MewExtendedToolkit.Html" class="">MewExtendedToolkit.Html</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="MewExtendedToolkit.Html.ControlExtensions.html" title="ControlExtensions" class="">ControlExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.Html.HtmlContainer.html" title="HtmlContainer" class="">HtmlContainer</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.Html.HtmlControl.html" title="HtmlControl" class="">HtmlControl</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.Html.HtmlLabel.html" title="HtmlLabel" class="">HtmlLabel</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.Html.HtmlPanel.html" title="HtmlPanel" class="">HtmlPanel</a>
+                          </li>
+                        </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MewExtendedToolkit.TransformBox">
+
+
+
+  <h1 id="MewExtendedToolkit_TransformBox" data-uid="MewExtendedToolkit.TransformBox" class="text-break">Class TransformBox</h1>
+  <div class="markdown level0 summary"><p>Decorator that applies a composed Matrix3x2 transform before rendering the child.
+Transform order: Translate(-origin) → Scale → Rotate → Translate(+origin + offset).
+Origin is relative (0.0–1.0) to the content bounds; defaults to center (0.5, 0.5).</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">MewObject</span></div>
+    <div class="level2"><span class="xref">Element</span></div>
+    <div class="level3"><span class="xref">UIElement</span></div>
+    <div class="level4"><span class="xref">FrameworkElement</span></div>
+    <div class="level5"><span class="xref">TransformBox</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><span class="xref">IVisualTreeHost</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">FrameworkElement.WidthProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.HeightProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.MinWidthProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.MinHeightProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.MaxWidthProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.MaxHeightProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.MarginProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.HorizontalAlignmentProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.VerticalAlignmentProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.TagProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.GetDpi()</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.StyleSheet</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.Width</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.Height</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.MinWidth</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.MinHeight</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.MaxWidth</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.MaxHeight</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.Margin</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.HorizontalAlignment</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.VerticalAlignment</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.Tag</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.ActualWidth</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.ActualHeight</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.SizeChanged</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.CacheModeProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsVisibleProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsEnabledProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsFocusedProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsFocusWithinProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsMouseOverProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsMouseCapturedProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsHitTestVisibleProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.TabIndexProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsTabStopProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.FocusableProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.SkipViewportCullProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.CursorProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.AllowDropProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.CanDragProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.InvalidateVisual()</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.Render(IGraphicsContext)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.InvalidateVisualState()</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.HitTest(Point)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.Focus()</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.PointToScreen(Point)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.PointFromScreen(Point)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.RectToScreen(Rect)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.RectFromScreen(Rect)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.BeginDrag(IDataObject, DragDropEffects, DragPreviewContent)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.CacheMode</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.SkipViewportCull</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsVisible</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsEnabled</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsEffectivelyEnabled</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsHitTestVisible</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.TabIndex</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsTabStop</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.Cursor</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsFocused</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsFocusWithin</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsMouseOver</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsMouseCaptured</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.Focusable</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.AllowDrop</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.CanDrag</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.GotFocus</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.LostFocus</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.MouseEnter</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.MouseLeave</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.MouseDown</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.MouseDoubleClick</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.MouseUp</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.MouseMove</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.MouseWheel</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.KeyDown</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.KeyUp</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.DragEnter</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.DragOver</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.DragLeave</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.Drop</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.DragStarting</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.DragCompleted</span>
+    </div>
+    <div>
+      <span class="xref">Element.FindLogicalRoot()</span>
+    </div>
+    <div>
+      <span class="xref">Element.Measure(Size)</span>
+    </div>
+    <div>
+      <span class="xref">Element.Arrange(Rect)</span>
+    </div>
+    <div>
+      <span class="xref">Element.InvalidateMeasure()</span>
+    </div>
+    <div>
+      <span class="xref">Element.InvalidateArrange()</span>
+    </div>
+    <div>
+      <span class="xref">Element.FindVisualRoot()</span>
+    </div>
+    <div>
+      <span class="xref">Element.IsAncestorOf(Element)</span>
+    </div>
+    <div>
+      <span class="xref">Element.IsDescendantOf(Element)</span>
+    </div>
+    <div>
+      <span class="xref">Element.TransformToAncestor(Element)</span>
+    </div>
+    <div>
+      <span class="xref">Element.TransformToDescendant(Element)</span>
+    </div>
+    <div>
+      <span class="xref">Element.TransformToVisual(Element)</span>
+    </div>
+    <div>
+      <span class="xref">Element.TranslatePoint(Point, Element)</span>
+    </div>
+    <div>
+      <span class="xref">Element.TranslateRect(Rect, Element)</span>
+    </div>
+    <div>
+      <span class="xref">Element.DesiredSize</span>
+    </div>
+    <div>
+      <span class="xref">Element.RenderSize</span>
+    </div>
+    <div>
+      <span class="xref">Element.Parent</span>
+    </div>
+    <div>
+      <span class="xref">Element.LogicalParent</span>
+    </div>
+    <div>
+      <span class="xref">Element.IsMeasureDirty</span>
+    </div>
+    <div>
+      <span class="xref">Element.IsArrangeDirty</span>
+    </div>
+    <div>
+      <span class="xref">MewObject.SetBinding&lt;T&gt;(MewProperty&lt;T&gt;, ObservableValue&lt;T&gt;, BindingMode?)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">MewObject.SetBinding&lt;TProp, TSource&gt;(MewProperty&lt;TProp&gt;, ObservableValue&lt;TSource&gt;, Func&lt;TSource, TProp&gt;, Func&lt;TProp, TSource&gt;, BindingMode?)</a>
+    </div>
+    <div>
+      <span class="xref">MewObject.ClearBinding&lt;T&gt;(MewProperty&lt;T&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">MewObject.SetBinding&lt;T&gt;(MewProperty&lt;T&gt;, MewObject, MewProperty&lt;T&gt;)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">MewObject.SetBinding&lt;TProp, TSource&gt;(MewProperty&lt;TProp&gt;, MewObject, MewProperty&lt;TSource&gt;, Func&lt;TSource, TProp&gt;, Func&lt;TProp, TSource&gt;, BindingMode?)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MewExtendedToolkit.html">MewExtendedToolkit</a></h6>
+  <h6><strong>Assembly</strong>: MewExtendedToolkit.dll</h6>
+  <h5 id="MewExtendedToolkit_TransformBox_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class TransformBox : FrameworkElement, IDisposable, IVisualTreeHost</code></pre>
+  </div>
+  <h3 id="fields">Fields
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_TransformBox_ChildProperty.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.TransformBox.ChildProperty%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit/(TransformBox)/TransformBox.cs/#L15">View Source</a>
+  </span>
+  <h4 id="MewExtendedToolkit_TransformBox_ChildProperty" data-uid="MewExtendedToolkit.TransformBox.ChildProperty">ChildProperty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly MewProperty&lt;UIElement?&gt; ChildProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MewProperty</span>&lt;<span class="xref">UIElement</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_TransformBox_RotationDegreesProperty.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.TransformBox.RotationDegreesProperty%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit/(TransformBox)/TransformBox.cs/#L32">View Source</a>
+  </span>
+  <h4 id="MewExtendedToolkit_TransformBox_RotationDegreesProperty" data-uid="MewExtendedToolkit.TransformBox.RotationDegreesProperty">RotationDegreesProperty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly MewProperty&lt;double&gt; RotationDegreesProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MewProperty</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_TransformBox_ScaleXProperty.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.TransformBox.ScaleXProperty%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit/(TransformBox)/TransformBox.cs/#L35">View Source</a>
+  </span>
+  <h4 id="MewExtendedToolkit_TransformBox_ScaleXProperty" data-uid="MewExtendedToolkit.TransformBox.ScaleXProperty">ScaleXProperty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly MewProperty&lt;double&gt; ScaleXProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MewProperty</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_TransformBox_ScaleYProperty.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.TransformBox.ScaleYProperty%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit/(TransformBox)/TransformBox.cs/#L38">View Source</a>
+  </span>
+  <h4 id="MewExtendedToolkit_TransformBox_ScaleYProperty" data-uid="MewExtendedToolkit.TransformBox.ScaleYProperty">ScaleYProperty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly MewProperty&lt;double&gt; ScaleYProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MewProperty</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_TransformBox_TranslateXProperty.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.TransformBox.TranslateXProperty%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit/(TransformBox)/TransformBox.cs/#L26">View Source</a>
+  </span>
+  <h4 id="MewExtendedToolkit_TransformBox_TranslateXProperty" data-uid="MewExtendedToolkit.TransformBox.TranslateXProperty">TranslateXProperty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly MewProperty&lt;double&gt; TranslateXProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MewProperty</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_TransformBox_TranslateYProperty.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.TransformBox.TranslateYProperty%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit/(TransformBox)/TransformBox.cs/#L29">View Source</a>
+  </span>
+  <h4 id="MewExtendedToolkit_TransformBox_TranslateYProperty" data-uid="MewExtendedToolkit.TransformBox.TranslateYProperty">TranslateYProperty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly MewProperty&lt;double&gt; TranslateYProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MewProperty</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_TransformBox_Child.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.TransformBox.Child%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit/(TransformBox)/TransformBox.cs/#L41">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_TransformBox_Child_" data-uid="MewExtendedToolkit.TransformBox.Child*"></a>
+  <h4 id="MewExtendedToolkit_TransformBox_Child" data-uid="MewExtendedToolkit.TransformBox.Child">Child</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UIElement? Child { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UIElement</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_TransformBox_HasTransform.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.TransformBox.HasTransform%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit/(TransformBox)/TransformBox.cs/#L77">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_TransformBox_HasTransform_" data-uid="MewExtendedToolkit.TransformBox.HasTransform*"></a>
+  <h4 id="MewExtendedToolkit_TransformBox_HasTransform" data-uid="MewExtendedToolkit.TransformBox.HasTransform">HasTransform</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasTransform { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_TransformBox_RotationDegrees.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.TransformBox.RotationDegrees%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit/(TransformBox)/TransformBox.cs/#L59">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_TransformBox_RotationDegrees_" data-uid="MewExtendedToolkit.TransformBox.RotationDegrees*"></a>
+  <h4 id="MewExtendedToolkit_TransformBox_RotationDegrees" data-uid="MewExtendedToolkit.TransformBox.RotationDegrees">RotationDegrees</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double RotationDegrees { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_TransformBox_ScaleX.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.TransformBox.ScaleX%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit/(TransformBox)/TransformBox.cs/#L65">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_TransformBox_ScaleX_" data-uid="MewExtendedToolkit.TransformBox.ScaleX*"></a>
+  <h4 id="MewExtendedToolkit_TransformBox_ScaleX" data-uid="MewExtendedToolkit.TransformBox.ScaleX">ScaleX</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ScaleX { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_TransformBox_ScaleY.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.TransformBox.ScaleY%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit/(TransformBox)/TransformBox.cs/#L71">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_TransformBox_ScaleY_" data-uid="MewExtendedToolkit.TransformBox.ScaleY*"></a>
+  <h4 id="MewExtendedToolkit_TransformBox_ScaleY" data-uid="MewExtendedToolkit.TransformBox.ScaleY">ScaleY</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ScaleY { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_TransformBox_TranslateX.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.TransformBox.TranslateX%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit/(TransformBox)/TransformBox.cs/#L47">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_TransformBox_TranslateX_" data-uid="MewExtendedToolkit.TransformBox.TranslateX*"></a>
+  <h4 id="MewExtendedToolkit_TransformBox_TranslateX" data-uid="MewExtendedToolkit.TransformBox.TranslateX">TranslateX</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TranslateX { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_TransformBox_TranslateY.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.TransformBox.TranslateY%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit/(TransformBox)/TransformBox.cs/#L53">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_TransformBox_TranslateY_" data-uid="MewExtendedToolkit.TransformBox.TranslateY*"></a>
+  <h4 id="MewExtendedToolkit_TransformBox_TranslateY" data-uid="MewExtendedToolkit.TransformBox.TranslateY">TranslateY</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TranslateY { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_TransformBox_ArrangeContent_Aprillz_MewUI_Rect_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.TransformBox.ArrangeContent(Aprillz.MewUI.Rect)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit/(TransformBox)/TransformBox.cs/#L109">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_TransformBox_ArrangeContent_" data-uid="MewExtendedToolkit.TransformBox.ArrangeContent*"></a>
+  <h4 id="MewExtendedToolkit_TransformBox_ArrangeContent_Aprillz_MewUI_Rect_" data-uid="MewExtendedToolkit.TransformBox.ArrangeContent(Aprillz.MewUI.Rect)">ArrangeContent(Rect)</h4>
+  <div class="markdown level1 summary"><p>Arranges the content. Override in derived classes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void ArrangeContent(Rect bounds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">bounds</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Aprillz.MewUI.Controls.FrameworkElement.ArrangeContent(Aprillz.MewUI.Rect)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_TransformBox_MeasureContent_Aprillz_MewUI_Size_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.TransformBox.MeasureContent(Aprillz.MewUI.Size)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit/(TransformBox)/TransformBox.cs/#L82">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_TransformBox_MeasureContent_" data-uid="MewExtendedToolkit.TransformBox.MeasureContent*"></a>
+  <h4 id="MewExtendedToolkit_TransformBox_MeasureContent_Aprillz_MewUI_Size_" data-uid="MewExtendedToolkit.TransformBox.MeasureContent(Aprillz.MewUI.Size)">MeasureContent(Size)</h4>
+  <div class="markdown level1 summary"><p>Measures the content. Override in derived classes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Size MeasureContent(Size availableSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Size</span></td>
+        <td><span class="parametername">availableSize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Aprillz.MewUI.Controls.FrameworkElement.MeasureContent(Aprillz.MewUI.Size)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_TransformBox_OnHitTest_Aprillz_MewUI_Point_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.TransformBox.OnHitTest(Aprillz.MewUI.Point)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit/(TransformBox)/TransformBox.cs/#L120">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_TransformBox_OnHitTest_" data-uid="MewExtendedToolkit.TransformBox.OnHitTest*"></a>
+  <h4 id="MewExtendedToolkit_TransformBox_OnHitTest_Aprillz_MewUI_Point_" data-uid="MewExtendedToolkit.TransformBox.OnHitTest(Aprillz.MewUI.Point)">OnHitTest(Point)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override UIElement? OnHitTest(Point point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Point</span></td>
+        <td><span class="parametername">point</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UIElement</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Aprillz.MewUI.Controls.UIElement.OnHitTest(Aprillz.MewUI.Point)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_TransformBox_RenderSubtree_Aprillz_MewUI_Rendering_IGraphicsContext_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.TransformBox.RenderSubtree(Aprillz.MewUI.Rendering.IGraphicsContext)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit/(TransformBox)/TransformBox.cs/#L187">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_TransformBox_RenderSubtree_" data-uid="MewExtendedToolkit.TransformBox.RenderSubtree*"></a>
+  <h4 id="MewExtendedToolkit_TransformBox_RenderSubtree_Aprillz_MewUI_Rendering_IGraphicsContext_" data-uid="MewExtendedToolkit.TransformBox.RenderSubtree(Aprillz.MewUI.Rendering.IGraphicsContext)">RenderSubtree(IGraphicsContext)</h4>
+  <div class="markdown level1 summary"><p>Renders child elements and internal visual parts (content, chrome, scrollbars, etc.).
+Called after <span class="xref">Aprillz.MewUI.Controls.UIElement.OnRender(Aprillz.MewUI.Rendering.IGraphicsContext)</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void RenderSubtree(IGraphicsContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IGraphicsContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Aprillz.MewUI.Controls.UIElement.RenderSubtree(Aprillz.MewUI.Rendering.IGraphicsContext)</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
+  </div>
+  <div>
+      <span class="xref">Aprillz.MewUI.IVisualTreeHost</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MewExtendedToolkit.TransformBoxExtensions.html#MewExtendedToolkit_TransformBoxExtensions_Child_MewExtendedToolkit_TransformBox_Aprillz_MewUI_Controls_UIElement_">TransformBoxExtensions.Child(TransformBox, UIElement?)</a>
+  </div>
+  <div>
+      <a class="xref" href="MewExtendedToolkit.TransformBoxExtensions.html#MewExtendedToolkit_TransformBoxExtensions_RotationDegrees_MewExtendedToolkit_TransformBox_System_Double_">TransformBoxExtensions.RotationDegrees(TransformBox, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="MewExtendedToolkit.TransformBoxExtensions.html#MewExtendedToolkit_TransformBoxExtensions_Scale_MewExtendedToolkit_TransformBox_System_Double_System_Double_">TransformBoxExtensions.Scale(TransformBox, double, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="MewExtendedToolkit.TransformBoxExtensions.html#MewExtendedToolkit_TransformBoxExtensions_ScaleX_MewExtendedToolkit_TransformBox_System_Double_">TransformBoxExtensions.ScaleX(TransformBox, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="MewExtendedToolkit.TransformBoxExtensions.html#MewExtendedToolkit_TransformBoxExtensions_ScaleY_MewExtendedToolkit_TransformBox_System_Double_">TransformBoxExtensions.ScaleY(TransformBox, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="MewExtendedToolkit.TransformBoxExtensions.html#MewExtendedToolkit_TransformBoxExtensions_Translate_MewExtendedToolkit_TransformBox_System_Double_System_Double_">TransformBoxExtensions.Translate(TransformBox, double, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="MewExtendedToolkit.TransformBoxExtensions.html#MewExtendedToolkit_TransformBoxExtensions_TranslateX_MewExtendedToolkit_TransformBox_System_Double_">TransformBoxExtensions.TranslateX(TransformBox, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="MewExtendedToolkit.TransformBoxExtensions.html#MewExtendedToolkit_TransformBoxExtensions_TranslateY_MewExtendedToolkit_TransformBox_System_Double_">TransformBoxExtensions.TranslateY(TransformBox, double)</a>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_TransformBox.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.TransformBox%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit/(TransformBox)/TransformBox.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Copyright (c) 2026 J&eacute;r&eacute;my Ansel
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

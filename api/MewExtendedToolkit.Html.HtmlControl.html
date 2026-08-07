@@ -1,0 +1,2281 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class HtmlControl </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class HtmlControl ">
+    
+    <meta name="description" content="Provides HTML rendering using the text property. MewUI control that will render html content in it&#39;s client rectangle. The control will handle mouse and keyboard events on it to support html text selection, copy-paste and mouse clicks.  The major differential to use HtmlPanel or HtmlLabel is size and scrollbars. If the size of the control depends on the html content the HtmlLabel should be used. If the size is set by some kind of layout then HtmlPanel is more suitable, also shows scrollbars if the html contents is larger than the control client rectangle.   LinkClicked event: Raised when the user clicks on a link in the html. Allows canceling the execution of the link.   StylesheetLoad event: Raised when a stylesheet is about to be loaded by file path or URI by link element. This event allows to provide the stylesheet manually or provide new source (file or uri) to load from. If no alternative data is provided the original source will be used.   ImageLoad event: Raised when an image is about to be loaded by file path or URI. This event allows to provide the image manually, if not handled the image will be loaded from file or download from URI.   RenderError event: Raised when an error occurred during html rendering.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.json">
+      <meta property="docfx:tocrel" content="toc.json">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../api/index.html" title="Api Documentation">Api Documentation</a>
+                      </li>
+                      <li>
+                          <a href="https://github.com/JeremyAnsel/MewExtendedToolkit" title="Source Code">Source Code</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="MewExtendedToolkit.html" title="MewExtendedToolkit" class="">MewExtendedToolkit</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="MewExtendedToolkit.AboutBox.html" title="AboutBox" class="">AboutBox</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.AboutBoxExtensions.html" title="AboutBoxExtensions" class="">AboutBoxExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.InputBox.html" title="InputBox" class="">InputBox</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.ObservableValueExtensions.html" title="ObservableValueExtensions" class="">ObservableValueExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.SharpAppProperties.html" title="SharpAppProperties" class="">SharpAppProperties</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.TransformBox.html" title="TransformBox" class="">TransformBox</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.TransformBoxExtensions.html" title="TransformBoxExtensions" class="">TransformBoxExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.Wizard.html" title="Wizard" class="">Wizard</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.WizardExtensions.html" title="WizardExtensions" class="">WizardExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.WizardPage.html" title="WizardPage" class="">WizardPage</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.WizardPageExtensions.html" title="WizardPageExtensions" class="">WizardPageExtensions</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="MewExtendedToolkit.Html.html" title="MewExtendedToolkit.Html" class="">MewExtendedToolkit.Html</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="MewExtendedToolkit.Html.ControlExtensions.html" title="ControlExtensions" class="">ControlExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.Html.HtmlContainer.html" title="HtmlContainer" class="">HtmlContainer</a>
+                          </li>
+                          <li class="active">
+                            <a href="MewExtendedToolkit.Html.HtmlControl.html" title="HtmlControl" class="active">HtmlControl</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.Html.HtmlLabel.html" title="HtmlLabel" class="">HtmlLabel</a>
+                          </li>
+                          <li class="">
+                            <a href="MewExtendedToolkit.Html.HtmlPanel.html" title="HtmlPanel" class="">HtmlPanel</a>
+                          </li>
+                        </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MewExtendedToolkit.Html.HtmlControl">
+
+
+
+  <h1 id="MewExtendedToolkit_Html_HtmlControl" data-uid="MewExtendedToolkit.Html.HtmlControl" class="text-break">Class HtmlControl</h1>
+  <div class="markdown level0 summary"><p>Provides HTML rendering using the text property.<br>
+MewUI control that will render html content in it's client rectangle.<br>
+The control will handle mouse and keyboard events on it to support html text selection, copy-paste and mouse clicks.<br></p>
+<p>
+The major differential to use HtmlPanel or HtmlLabel is size and scrollbars.<br>
+If the size of the control depends on the html content the HtmlLabel should be used.<br>
+If the size is set by some kind of layout then HtmlPanel is more suitable, also shows scrollbars if the html contents is larger than the control client rectangle.<br>
+</p>
+<p>
+<h4>LinkClicked event:</h4>
+Raised when the user clicks on a link in the html.<br>
+Allows canceling the execution of the link.
+
+<p>
+<h4>StylesheetLoad event:</h4>
+Raised when a stylesheet is about to be loaded by file path or URI by link element.<br>
+This event allows to provide the stylesheet manually or provide new source (file or uri) to load from.<br>
+If no alternative data is provided the original source will be used.<br>
+
+<p>
+<h4>ImageLoad event:</h4>
+Raised when an image is about to be loaded by file path or URI.<br>
+This event allows to provide the image manually, if not handled the image will be loaded from file or download from URI.
+
+<p>
+<h4>RenderError event:</h4>
+Raised when an error occurred during html rendering.<br>
+
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">MewObject</span></div>
+    <div class="level2"><span class="xref">Element</span></div>
+    <div class="level3"><span class="xref">UIElement</span></div>
+    <div class="level4"><span class="xref">FrameworkElement</span></div>
+    <div class="level5"><span class="xref">TextElement</span></div>
+    <div class="level6"><span class="xref">Control</span></div>
+    <div class="level7"><span class="xref">HtmlControl</span></div>
+      <div class="level8"><a class="xref" href="MewExtendedToolkit.Html.HtmlLabel.html">HtmlLabel</a></div>
+      <div class="level8"><a class="xref" href="MewExtendedToolkit.Html.HtmlPanel.html">HtmlPanel</a></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><span class="xref">IVisualTreeHost</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Control.BackgroundProperty</span>
+    </div>
+    <div>
+      <span class="xref">Control.BorderBrushProperty</span>
+    </div>
+    <div>
+      <span class="xref">Control.TemplateProperty</span>
+    </div>
+    <div>
+      <span class="xref">Control.CornerRadiusProperty</span>
+    </div>
+    <div>
+      <span class="xref">Control.BorderThicknessProperty</span>
+    </div>
+    <div>
+      <span class="xref">Control.PaddingProperty</span>
+    </div>
+    <div>
+      <span class="xref">Control.ToolTipProperty</span>
+    </div>
+    <div>
+      <span class="xref">Control.ContextMenuProperty</span>
+    </div>
+    <div>
+      <span class="xref">Control.IsPressedProperty</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Control.SetPressed(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Control.RegisterPart(string, UIElement)</a>
+    </div>
+    <div>
+      <span class="xref">Control.ComputeVisualState()</span>
+    </div>
+    <div>
+      <span class="xref">Control.OnVisualStateChanged(Control.VisualState, Control.VisualState)</span>
+    </div>
+    <div>
+      <span class="xref">Control.EnsureStyleResolved()</span>
+    </div>
+    <div>
+      <span class="xref">Control.MeasureOverride(Size)</span>
+    </div>
+    <div>
+      <span class="xref">Control.ApplyTemplate()</span>
+    </div>
+    <div>
+      <span class="xref">Control.OnApplyTemplate()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Control.GetTemplateChild&lt;T&gt;(string)</a>
+    </div>
+    <div>
+      <span class="xref">Control.MeasureContent(Size)</span>
+    </div>
+    <div>
+      <span class="xref">Control.ArrangeContent(Rect)</span>
+    </div>
+    <div>
+      <span class="xref">Control.RenderSubtree(IGraphicsContext)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Control.ResolveVisualState(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Control.OnThemeChanged(Theme, Theme)</span>
+    </div>
+    <div>
+      <span class="xref">Control.OnVisualRootChanged(Element, Element)</span>
+    </div>
+    <div>
+      <span class="xref">Control.OnMewPropertyChanged(MewProperty)</span>
+    </div>
+    <div>
+      <span class="xref">Control.OnFontCacheInvalidated(MewProperty)</span>
+    </div>
+    <div>
+      <span class="xref">Control.BeginTextMeasurement()</span>
+    </div>
+    <div>
+      <span class="xref">Control.GetFont(IGraphicsFactory)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">Control.OnDpiChanged(uint, uint)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Control.PickAccentBorder(Theme, Color, in Control.VisualState, double)</a>
+    </div>
+    <div>
+      <span class="xref">Control.PickButtonBackground(in Control.VisualState, Color?)</span>
+    </div>
+    <div>
+      <span class="xref">Control.PickControlBackground(in Control.VisualState, Color?)</span>
+    </div>
+    <div>
+      <span class="xref">Control.PickControlBackground(in Control.VisualState, Color)</span>
+    </div>
+    <div>
+      <span class="xref">Control.GetFont()</span>
+    </div>
+    <div>
+      <span class="xref">Control.GetBorderVisualInset()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Control.DrawBackgroundAndBorder(IGraphicsContext, Rect, Color, Color, double, double)</a>
+    </div>
+    <div>
+      <span class="xref">Control.DrawBackgroundAndBorder(IGraphicsContext, Rect, Color, Color, Thickness, CornerRadius)</span>
+    </div>
+    <div>
+      <span class="xref">Control.OnMouseEnter()</span>
+    </div>
+    <div>
+      <span class="xref">Control.OnDispose()</span>
+    </div>
+    <div>
+      <span class="xref">Control.ToolTip</span>
+    </div>
+    <div>
+      <span class="xref">Control.ContextMenu</span>
+    </div>
+    <div>
+      <span class="xref">Control.Background</span>
+    </div>
+    <div>
+      <span class="xref">Control.BorderBrush</span>
+    </div>
+    <div>
+      <span class="xref">Control.CornerRadius</span>
+    </div>
+    <div>
+      <span class="xref">Control.BorderThickness</span>
+    </div>
+    <div>
+      <span class="xref">Control.Padding</span>
+    </div>
+    <div>
+      <span class="xref">Control.ContentBounds</span>
+    </div>
+    <div>
+      <span class="xref">Control.CurrentVisualState</span>
+    </div>
+    <div>
+      <span class="xref">Control.IsPressed</span>
+    </div>
+    <div>
+      <span class="xref">Control.StyleName</span>
+    </div>
+    <div>
+      <span class="xref">Control.Template</span>
+    </div>
+    <div>
+      <span class="xref">TextElement.ForegroundProperty</span>
+    </div>
+    <div>
+      <span class="xref">TextElement.FontFamilyProperty</span>
+    </div>
+    <div>
+      <span class="xref">TextElement.FontSizeProperty</span>
+    </div>
+    <div>
+      <span class="xref">TextElement.FontWeightProperty</span>
+    </div>
+    <div>
+      <span class="xref">TextElement.Foreground</span>
+    </div>
+    <div>
+      <span class="xref">TextElement.FontFamily</span>
+    </div>
+    <div>
+      <span class="xref">TextElement.FontSize</span>
+    </div>
+    <div>
+      <span class="xref">TextElement.FontWeight</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.ThemeProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.WidthProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.HeightProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.MinWidthProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.MinHeightProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.MaxWidthProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.MaxHeightProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.MarginProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.HorizontalAlignmentProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.VerticalAlignmentProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.TagProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.GetDpi()</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.GetSnappedBorderBounds(Rect)</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.GetGraphicsFactory()</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.OnSizeChanged(SizeChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.ArrangeCore(Rect)</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.GetArrangedBounds(Rect)</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.ArrangeOverride(Size)</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.StyleSheet</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.Width</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.Height</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.MinWidth</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.MinHeight</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.MaxWidth</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.MaxHeight</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.Margin</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.HorizontalAlignment</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.VerticalAlignment</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.Tag</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.ActualWidth</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.ActualHeight</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.Theme</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.SizeChanged</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.CacheModeProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsVisibleProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsEnabledProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsFocusedProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsFocusWithinProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsMouseOverProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsMouseCapturedProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsHitTestVisibleProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.TabIndexProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsTabStopProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.FocusableProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.SkipViewportCullProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.CursorProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.AllowDropProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.CanDragProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.InvalidateVisual()</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.OnParentChanged()</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.MeasureCore(Size)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.Render(IGraphicsContext)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.InvalidateVisualState()</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.HitTest(Point)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.OnHitTest(Point)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.Focus()</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.PointToScreen(Point)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.PointFromScreen(Point)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.RectToScreen(Rect)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.RectFromScreen(Rect)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.ComputeIsEnabledSuggestion()</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.OnGotFocus()</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.OnLostFocus()</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.OnMouseWheel(MouseWheelEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.OnKeyUp(KeyEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.OnVisibilityChanged()</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.OnEnabledChanged()</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.SetTarget&lt;T&gt;(MewProperty&lt;T&gt;, T)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.OnDragEnter(DragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.OnDragOver(DragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.OnDragLeave(DragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.OnDrop(DragEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.OnDragStarting(DragStartingEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.OnDragCompleted(DragCompletedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.BeginDrag(IDataObject, DragDropEffects, DragPreviewContent)</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.CacheMode</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.SkipViewportCull</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsVisible</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsEnabled</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsEffectivelyEnabled</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsHitTestVisible</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.TabIndex</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsTabStop</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.Cursor</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsFocused</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsFocusWithin</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsMouseOver</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.IsMouseCaptured</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.Focusable</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.AllowDrop</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.CanDrag</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.GotFocus</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.LostFocus</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.MouseEnter</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.MouseLeave</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.MouseDown</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.MouseDoubleClick</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.MouseUp</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.MouseMove</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.MouseWheel</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.KeyDown</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.KeyUp</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.DragEnter</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.DragOver</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.DragLeave</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.Drop</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.DragStarting</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.DragCompleted</span>
+    </div>
+    <div>
+      <span class="xref">Element.Set&lt;T&gt;(ref T, T)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Element.SetDouble(ref double, double)</a>
+    </div>
+    <div>
+      <span class="xref">Element.AttachChild(Element)</span>
+    </div>
+    <div>
+      <span class="xref">Element.DetachChild(Element)</span>
+    </div>
+    <div>
+      <span class="xref">Element.AttachLogicalChild(Element)</span>
+    </div>
+    <div>
+      <span class="xref">Element.DetachLogicalChild(Element)</span>
+    </div>
+    <div>
+      <span class="xref">Element.OnLogicalChildTaken(Element)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Element.ValidateLogicalChild(Element, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Element.ChangeLogicalChild(Element, Element)</span>
+    </div>
+    <div>
+      <span class="xref">Element.FindLogicalRoot()</span>
+    </div>
+    <div>
+      <span class="xref">Element.OnLogicalParentChanged()</span>
+    </div>
+    <div>
+      <span class="xref">Element.OnLogicalRootChanged(Element, Element)</span>
+    </div>
+    <div>
+      <span class="xref">Element.Measure(Size)</span>
+    </div>
+    <div>
+      <span class="xref">Element.Arrange(Rect)</span>
+    </div>
+    <div>
+      <span class="xref">Element.InvalidateMeasure()</span>
+    </div>
+    <div>
+      <span class="xref">Element.InvalidateArrange()</span>
+    </div>
+    <div>
+      <span class="xref">Element.FindVisualRoot()</span>
+    </div>
+    <div>
+      <span class="xref">Element.IsAncestorOf(Element)</span>
+    </div>
+    <div>
+      <span class="xref">Element.IsDescendantOf(Element)</span>
+    </div>
+    <div>
+      <span class="xref">Element.TransformToAncestor(Element)</span>
+    </div>
+    <div>
+      <span class="xref">Element.TransformToDescendant(Element)</span>
+    </div>
+    <div>
+      <span class="xref">Element.TransformToVisual(Element)</span>
+    </div>
+    <div>
+      <span class="xref">Element.TranslatePoint(Point, Element)</span>
+    </div>
+    <div>
+      <span class="xref">Element.TranslateRect(Rect, Element)</span>
+    </div>
+    <div>
+      <span class="xref">Element.ResolveInheritedValue&lt;T&gt;(MewProperty&lt;T&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Element.DesiredSize</span>
+    </div>
+    <div>
+      <span class="xref">Element.RenderSize</span>
+    </div>
+    <div>
+      <span class="xref">Element.Parent</span>
+    </div>
+    <div>
+      <span class="xref">Element.LogicalParent</span>
+    </div>
+    <div>
+      <span class="xref">Element.IsMeasureDirty</span>
+    </div>
+    <div>
+      <span class="xref">Element.IsArrangeDirty</span>
+    </div>
+    <div>
+      <span class="xref">MewObject.GetValue&lt;T&gt;(MewProperty&lt;T&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">MewObject.SetValue&lt;T&gt;(MewProperty&lt;T&gt;, T)</span>
+    </div>
+    <div>
+      <span class="xref">MewObject.SetValue&lt;T&gt;(MewPropertyKey&lt;T&gt;, T)</span>
+    </div>
+    <div>
+      <span class="xref">MewObject.CoerceValue&lt;T&gt;(MewProperty&lt;T&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">MewObject.SetBinding&lt;T&gt;(MewProperty&lt;T&gt;, ObservableValue&lt;T&gt;, BindingMode?)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">MewObject.SetBinding&lt;TProp, TSource&gt;(MewProperty&lt;TProp&gt;, ObservableValue&lt;TSource&gt;, Func&lt;TSource, TProp&gt;, Func&lt;TProp, TSource&gt;, BindingMode?)</a>
+    </div>
+    <div>
+      <span class="xref">MewObject.ClearBinding&lt;T&gt;(MewProperty&lt;T&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">MewObject.SetBinding&lt;T&gt;(MewProperty&lt;T&gt;, MewObject, MewProperty&lt;T&gt;)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">MewObject.SetBinding&lt;TProp, TSource&gt;(MewProperty&lt;TProp&gt;, MewObject, MewProperty&lt;TSource&gt;, Func&lt;TSource, TProp&gt;, Func&lt;TProp, TSource&gt;, BindingMode?)</a>
+    </div>
+    <div>
+      <span class="xref">MewObject.DisposePropertyBindings()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MewExtendedToolkit.html">MewExtendedToolkit</a>.<a class="xref" href="MewExtendedToolkit.Html.html">Html</a></h6>
+  <h6><strong>Assembly</strong>: MewExtendedToolkit.Html.dll</h6>
+  <h5 id="MewExtendedToolkit_Html_HtmlControl_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class HtmlControl : Control, IDisposable, IVisualTreeHost</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl__ctor.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.%23ctor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L149">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl__ctor_" data-uid="MewExtendedToolkit.Html.HtmlControl.#ctor*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl__ctor" data-uid="MewExtendedToolkit.Html.HtmlControl.#ctor">HtmlControl()</h4>
+  <div class="markdown level1 summary"><p>Creates a new HtmlPanel and sets a basic css for it's styling.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected HtmlControl()</code></pre>
+  </div>
+  <h3 id="fields">Fields
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_AvoidImagesLateLoadingProperty.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.AvoidImagesLateLoadingProperty%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L65">View Source</a>
+  </span>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_AvoidImagesLateLoadingProperty" data-uid="MewExtendedToolkit.Html.HtmlControl.AvoidImagesLateLoadingProperty">AvoidImagesLateLoadingProperty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly MewProperty&lt;bool&gt; AvoidImagesLateLoadingProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MewProperty</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_BaseStylesheetProperty.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.BaseStylesheetProperty%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L74">View Source</a>
+  </span>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_BaseStylesheetProperty" data-uid="MewExtendedToolkit.Html.HtmlControl.BaseStylesheetProperty">BaseStylesheetProperty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly MewProperty&lt;string&gt; BaseStylesheetProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MewProperty</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_IsContextMenuEnabledProperty.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.IsContextMenuEnabledProperty%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L71">View Source</a>
+  </span>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_IsContextMenuEnabledProperty" data-uid="MewExtendedToolkit.Html.HtmlControl.IsContextMenuEnabledProperty">IsContextMenuEnabledProperty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly MewProperty&lt;bool&gt; IsContextMenuEnabledProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MewProperty</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_IsSelectionEnabledProperty.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.IsSelectionEnabledProperty%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L68">View Source</a>
+  </span>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_IsSelectionEnabledProperty" data-uid="MewExtendedToolkit.Html.HtmlControl.IsSelectionEnabledProperty">IsSelectionEnabledProperty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly MewProperty&lt;bool&gt; IsSelectionEnabledProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MewProperty</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_TextProperty.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.TextProperty%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L77">View Source</a>
+  </span>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_TextProperty" data-uid="MewExtendedToolkit.Html.HtmlControl.TextProperty">TextProperty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly MewProperty&lt;string&gt; TextProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MewProperty</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl__baseCssData.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl._baseCssData%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L53">View Source</a>
+  </span>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl__baseCssData" data-uid="MewExtendedToolkit.Html.HtmlControl._baseCssData">_baseCssData</h4>
+  <div class="markdown level1 summary"><p>the base stylesheet data used in the control</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected CssData? _baseCssData</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CssData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl__htmlContainer.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl._htmlContainer%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L48">View Source</a>
+  </span>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl__htmlContainer" data-uid="MewExtendedToolkit.Html.HtmlControl._htmlContainer">_htmlContainer</h4>
+  <div class="markdown level1 summary"><p>Underline html container instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly HtmlContainer _htmlContainer</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MewExtendedToolkit.Html.HtmlContainer.html">HtmlContainer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl__lastScrollOffset.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl._lastScrollOffset%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L58">View Source</a>
+  </span>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl__lastScrollOffset" data-uid="MewExtendedToolkit.Html.HtmlControl._lastScrollOffset">_lastScrollOffset</h4>
+  <div class="markdown level1 summary"><p>The last position of the scrollbars to know if it has changed to update mouse</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Point _lastScrollOffset</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Point</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl__mouseMovePoint.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl._mouseMovePoint%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L338">View Source</a>
+  </span>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl__mouseMovePoint" data-uid="MewExtendedToolkit.Html.HtmlControl._mouseMovePoint">_mouseMovePoint</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Point _mouseMovePoint</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Point</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_AvoidImagesLateLoading.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.AvoidImagesLateLoading%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L176">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_AvoidImagesLateLoading_" data-uid="MewExtendedToolkit.Html.HtmlControl.AvoidImagesLateLoading*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_AvoidImagesLateLoading" data-uid="MewExtendedToolkit.Html.HtmlControl.AvoidImagesLateLoading">AvoidImagesLateLoading</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating if image loading only when visible should be avoided (default - false).<br>
+True - images are loaded as soon as the html is parsed.<br>
+False - images that are not visible because of scroll location are not loaded until they are scrolled to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AvoidImagesLateLoading { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MewExtendedToolkit_Html_HtmlControl_AvoidImagesLateLoading_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Images late loading improve performance if the page contains image outside the visible scroll area, especially if there is large
+amount of images, as all image loading is delayed (downloading and loading into memory).<br>
+Late image loading may effect the layout and actual size as image without set size will not have actual size until they are loaded
+resulting in layout change during user scroll.<br>
+Early image loading may also effect the layout if image without known size above the current scroll location are loaded as they
+will push the html elements down.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_BaseStylesheet.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.BaseStylesheet%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L210">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_BaseStylesheet_" data-uid="MewExtendedToolkit.Html.HtmlControl.BaseStylesheet*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_BaseStylesheet" data-uid="MewExtendedToolkit.Html.HtmlControl.BaseStylesheet">BaseStylesheet</h4>
+  <div class="markdown level1 summary"><p>Set base stylesheet to be used by html rendered in the panel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string BaseStylesheet { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_IsContextMenuEnabled.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.IsContextMenuEnabled%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L199">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_IsContextMenuEnabled_" data-uid="MewExtendedToolkit.Html.HtmlControl.IsContextMenuEnabled*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_IsContextMenuEnabled" data-uid="MewExtendedToolkit.Html.HtmlControl.IsContextMenuEnabled">IsContextMenuEnabled</h4>
+  <div class="markdown level1 summary"><p>Is the build-in context menu enabled and will be shown on mouse right click (default - true)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsContextMenuEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_IsSelectionEnabled.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.IsSelectionEnabled%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L188">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_IsSelectionEnabled_" data-uid="MewExtendedToolkit.Html.HtmlControl.IsSelectionEnabled*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_IsSelectionEnabled" data-uid="MewExtendedToolkit.Html.HtmlControl.IsSelectionEnabled">IsSelectionEnabled</h4>
+  <div class="markdown level1 summary"><p>Is content selection is enabled for the rendered html (default - true).<br>
+If set to 'false' the rendered html will be static only with ability to click on links.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSelectionEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_SelectedHtml.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.SelectedHtml%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L240">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_SelectedHtml_" data-uid="MewExtendedToolkit.Html.HtmlControl.SelectedHtml*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_SelectedHtml" data-uid="MewExtendedToolkit.Html.HtmlControl.SelectedHtml">SelectedHtml</h4>
+  <div class="markdown level1 summary"><p>Copy the currently selected html segment with style.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Browsable(false)]
+public virtual string SelectedHtml { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_SelectedText.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.SelectedText%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L231">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_SelectedText_" data-uid="MewExtendedToolkit.Html.HtmlControl.SelectedText*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_SelectedText" data-uid="MewExtendedToolkit.Html.HtmlControl.SelectedText">SelectedText</h4>
+  <div class="markdown level1 summary"><p>Get the currently selected text segment in the html.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Browsable(false)]
+public virtual string SelectedText { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_Text.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.Text%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L221">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_Text_" data-uid="MewExtendedToolkit.Html.HtmlControl.Text*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_Text" data-uid="MewExtendedToolkit.Html.HtmlControl.Text">Text</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the text of this panel</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Text { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_ClearSelection.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.ClearSelection%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L270">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_ClearSelection_" data-uid="MewExtendedToolkit.Html.HtmlControl.ClearSelection*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_ClearSelection" data-uid="MewExtendedToolkit.Html.HtmlControl.ClearSelection">ClearSelection()</h4>
+  <div class="markdown level1 summary"><p>Clear the current selection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearSelection()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_GetElementRectangle_System_String_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.GetElementRectangle(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L262">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_GetElementRectangle_" data-uid="MewExtendedToolkit.Html.HtmlControl.GetElementRectangle*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_GetElementRectangle_System_String_" data-uid="MewExtendedToolkit.Html.HtmlControl.GetElementRectangle(System.String)">GetElementRectangle(string)</h4>
+  <div class="markdown level1 summary"><p>Get the rectangle of html element as calculated by html layout.<br>
+Element if found by id (id attribute on the html element).<br>
+Note: to get the screen rectangle you need to adjust by the hosting control.<br></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Rect? GetElementRectangle(string elementId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">elementId</span></td>
+        <td><p>the id of the element to get its rectangle</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span>?</td>
+        <td><p>the rectangle of the element or null if not found</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_GetHtml.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.GetHtml%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L250">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_GetHtml_" data-uid="MewExtendedToolkit.Html.HtmlControl.GetHtml*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_GetHtml" data-uid="MewExtendedToolkit.Html.HtmlControl.GetHtml">GetHtml()</h4>
+  <div class="markdown level1 summary"><p>Get html from the current DOM tree with inline style.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string? GetHtml()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>generated html</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_HtmlHeight_Aprillz_MewUI_Size_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.HtmlHeight(Aprillz.MewUI.Size)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L458">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_HtmlHeight_" data-uid="MewExtendedToolkit.Html.HtmlControl.HtmlHeight*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_HtmlHeight_Aprillz_MewUI_Size_" data-uid="MewExtendedToolkit.Html.HtmlControl.HtmlHeight(Aprillz.MewUI.Size)">HtmlHeight(Size)</h4>
+  <div class="markdown level1 summary"><p>Get the width the HTML has to render in (not including vertical scroll iff it is visible)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual double HtmlHeight(Size size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Size</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_HtmlWidth_Aprillz_MewUI_Size_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.HtmlWidth(Aprillz.MewUI.Size)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L450">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_HtmlWidth_" data-uid="MewExtendedToolkit.Html.HtmlControl.HtmlWidth*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_HtmlWidth_Aprillz_MewUI_Size_" data-uid="MewExtendedToolkit.Html.HtmlControl.HtmlWidth(Aprillz.MewUI.Size)">HtmlWidth(Size)</h4>
+  <div class="markdown level1 summary"><p>Get the width the HTML has to render in (not including vertical scroll iff it is visible)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual double HtmlWidth(Size size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Size</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_InvokeMouseMove.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.InvokeMouseMove%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L466">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_InvokeMouseMove_" data-uid="MewExtendedToolkit.Html.HtmlControl.InvokeMouseMove*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_InvokeMouseMove" data-uid="MewExtendedToolkit.Html.HtmlControl.InvokeMouseMove">InvokeMouseMove()</h4>
+  <div class="markdown level1 summary"><p>call mouse move to handle paint after scroll or html change affecting mouse cursor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InvokeMouseMove()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_OnImageLoad_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlImageLoadEventArgs_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.OnImageLoad(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlImageLoadEventArgs)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L430">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_OnImageLoad_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnImageLoad*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_OnImageLoad_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlImageLoadEventArgs_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnImageLoad(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlImageLoadEventArgs)">OnImageLoad(HtmlImageLoadEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Propagate the image load event from root container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnImageLoad(HtmlImageLoadEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HtmlImageLoadEventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_OnKeyDown_Aprillz_MewUI_KeyEventArgs_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.OnKeyDown(Aprillz.MewUI.KeyEventArgs)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L389">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_OnKeyDown_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnKeyDown*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_OnKeyDown_Aprillz_MewUI_KeyEventArgs_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnKeyDown(Aprillz.MewUI.KeyEventArgs)">OnKeyDown(KeyEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Handle key down event for selection, copy and scrollbars handling.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnKeyDown(KeyEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">KeyEventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Aprillz.MewUI.Controls.Control.OnKeyDown(Aprillz.MewUI.KeyEventArgs)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_OnLinkClicked_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlLinkClickedEventArgs_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.OnLinkClicked(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlLinkClickedEventArgs)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L406">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_OnLinkClicked_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnLinkClicked*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_OnLinkClicked_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlLinkClickedEventArgs_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnLinkClicked(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlLinkClickedEventArgs)">OnLinkClicked(HtmlLinkClickedEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Propagate the LinkClicked event from root container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnLinkClicked(HtmlLinkClickedEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HtmlLinkClickedEventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_OnLoadComplete_System_EventArgs_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.OnLoadComplete(System.EventArgs)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L398">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_OnLoadComplete_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnLoadComplete*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_OnLoadComplete_System_EventArgs_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnLoadComplete(System.EventArgs)">OnLoadComplete(EventArgs)</h4>
+  <div class="markdown level1 summary"><p>Propagate the LoadComplete event from root container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnLoadComplete(EventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_OnMouseDoubleClick_Aprillz_MewUI_MouseEventArgs_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.OnMouseDoubleClick(Aprillz.MewUI.MouseEventArgs)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L380">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_OnMouseDoubleClick_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnMouseDoubleClick*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_OnMouseDoubleClick_Aprillz_MewUI_MouseEventArgs_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnMouseDoubleClick(Aprillz.MewUI.MouseEventArgs)">OnMouseDoubleClick(MouseEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Handle mouse double click to select word under the mouse.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnMouseDoubleClick(MouseEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MouseEventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Aprillz.MewUI.Controls.UIElement.OnMouseDoubleClick(Aprillz.MewUI.MouseEventArgs)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_OnMouseDown_Aprillz_MewUI_MouseEventArgs_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.OnMouseDown(Aprillz.MewUI.MouseEventArgs)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L362">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_OnMouseDown_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnMouseDown*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_OnMouseDown_Aprillz_MewUI_MouseEventArgs_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnMouseDown(Aprillz.MewUI.MouseEventArgs)">OnMouseDown(MouseEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Handle mouse down to handle selection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnMouseDown(MouseEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MouseEventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Aprillz.MewUI.Controls.Control.OnMouseDown(Aprillz.MewUI.MouseEventArgs)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_OnMouseLeave.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.OnMouseLeave%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L353">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_OnMouseLeave_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnMouseLeave*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_OnMouseLeave" data-uid="MewExtendedToolkit.Html.HtmlControl.OnMouseLeave">OnMouseLeave()</h4>
+  <div class="markdown level1 summary"><p>Handle mouse leave to handle cursor change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnMouseLeave()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Aprillz.MewUI.Controls.Control.OnMouseLeave()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_OnMouseMove_Aprillz_MewUI_MouseEventArgs_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.OnMouseMove(Aprillz.MewUI.MouseEventArgs)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L343">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_OnMouseMove_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnMouseMove*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_OnMouseMove_Aprillz_MewUI_MouseEventArgs_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnMouseMove(Aprillz.MewUI.MouseEventArgs)">OnMouseMove(MouseEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Handle mouse move to handle hover cursor and text selection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnMouseMove(MouseEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MouseEventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Aprillz.MewUI.Controls.Control.OnMouseMove(Aprillz.MewUI.MouseEventArgs)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_OnMouseUp_Aprillz_MewUI_MouseEventArgs_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.OnMouseUp(Aprillz.MewUI.MouseEventArgs)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L371">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_OnMouseUp_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnMouseUp*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_OnMouseUp_Aprillz_MewUI_MouseEventArgs_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnMouseUp(Aprillz.MewUI.MouseEventArgs)">OnMouseUp(MouseEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Handle mouse up to handle selection and link click.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnMouseUp(MouseEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MouseEventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Aprillz.MewUI.Controls.UIElement.OnMouseUp(Aprillz.MewUI.MouseEventArgs)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_OnRefresh_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlRefreshEventArgs_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.OnRefresh(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlRefreshEventArgs)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L438">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_OnRefresh_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnRefresh*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_OnRefresh_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlRefreshEventArgs_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnRefresh(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlRefreshEventArgs)">OnRefresh(HtmlRefreshEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Handle html renderer invalidate and re-layout as requested.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnRefresh(HtmlRefreshEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HtmlRefreshEventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_OnRender_Aprillz_MewUI_Rendering_IGraphicsContext_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.OnRender(Aprillz.MewUI.Rendering.IGraphicsContext)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L281">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_OnRender_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnRender*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_OnRender_Aprillz_MewUI_Rendering_IGraphicsContext_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnRender(Aprillz.MewUI.Rendering.IGraphicsContext)">OnRender(IGraphicsContext)</h4>
+  <div class="markdown level1 summary"><p>Perform paint of the html in the control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnRender(IGraphicsContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IGraphicsContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Aprillz.MewUI.Controls.Control.OnRender(Aprillz.MewUI.Rendering.IGraphicsContext)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_OnRenderError_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlRenderErrorEventArgs_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.OnRenderError(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlRenderErrorEventArgs)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L414">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_OnRenderError_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnRenderError*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_OnRenderError_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlRenderErrorEventArgs_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnRenderError(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlRenderErrorEventArgs)">OnRenderError(HtmlRenderErrorEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Propagate the Render Error event from root container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnRenderError(HtmlRenderErrorEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HtmlRenderErrorEventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_OnStylesheetLoad_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlStylesheetLoadEventArgs_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.OnStylesheetLoad(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlStylesheetLoadEventArgs)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L422">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_OnStylesheetLoad_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnStylesheetLoad*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_OnStylesheetLoad_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlStylesheetLoadEventArgs_" data-uid="MewExtendedToolkit.Html.HtmlControl.OnStylesheetLoad(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlStylesheetLoadEventArgs)">OnStylesheetLoad(HtmlStylesheetLoadEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Propagate the stylesheet load event from root container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnStylesheetLoad(HtmlStylesheetLoadEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HtmlStylesheetLoadEventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_TextPropertyChanged_System_String_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.TextPropertyChanged(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L102">View Source</a>
+  </span>
+  <a id="MewExtendedToolkit_Html_HtmlControl_TextPropertyChanged_" data-uid="MewExtendedToolkit.Html.HtmlControl.TextPropertyChanged*"></a>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_TextPropertyChanged_System_String_" data-uid="MewExtendedToolkit.Html.HtmlControl.TextPropertyChanged(System.String)">TextPropertyChanged(string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void TextPropertyChanged(string n)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">n</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_ImageLoad.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.ImageLoad%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L141">View Source</a>
+  </span>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_ImageLoad" data-uid="MewExtendedToolkit.Html.HtmlControl.ImageLoad">ImageLoad</h4>
+  <div class="markdown level1 summary"><p>Raised when an image is about to be loaded by file path or URI.<br>
+This event allows to provide the image manually, if not handled the image will be loaded from file or download from URI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event EventHandler&lt;HtmlImageLoadEventArgs&gt;? ImageLoad</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<span class="xref">HtmlImageLoadEventArgs</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_LinkClicked.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.LinkClicked%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L121">View Source</a>
+  </span>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_LinkClicked" data-uid="MewExtendedToolkit.Html.HtmlControl.LinkClicked">LinkClicked</h4>
+  <div class="markdown level1 summary"><p>Raised when the user clicks on a link in the html.<br>
+Allows canceling the execution of the link.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event EventHandler&lt;HtmlLinkClickedEventArgs&gt;? LinkClicked</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<span class="xref">HtmlLinkClickedEventArgs</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_LoadComplete.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.LoadComplete%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L115">View Source</a>
+  </span>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_LoadComplete" data-uid="MewExtendedToolkit.Html.HtmlControl.LoadComplete">LoadComplete</h4>
+  <div class="markdown level1 summary"><p>Raised when the set html document has been fully loaded.<br>
+Allows manipulation of the html dom, scroll position, etc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event EventHandler&lt;EventArgs&gt;? LoadComplete</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_RenderError.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.RenderError%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L126">View Source</a>
+  </span>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_RenderError" data-uid="MewExtendedToolkit.Html.HtmlControl.RenderError">RenderError</h4>
+  <div class="markdown level1 summary"><p>Raised when an error occurred during html rendering.<br></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event EventHandler&lt;HtmlRenderErrorEventArgs&gt;? RenderError</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<span class="xref">HtmlRenderErrorEventArgs</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_StylesheetLoad.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.StylesheetLoad%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L135">View Source</a>
+  </span>
+  <h4 id="MewExtendedToolkit_Html_HtmlControl_StylesheetLoad" data-uid="MewExtendedToolkit.Html.HtmlControl.StylesheetLoad">StylesheetLoad</h4>
+  <div class="markdown level1 summary"><p>Raised when a stylesheet is about to be loaded by file path or URI by link element.<br>
+This event allows to provide the stylesheet manually or provide new source (file or uri) to load from.<br>
+If no alternative data is provided the original source will be used.<br></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event EventHandler&lt;HtmlStylesheetLoadEventArgs&gt;? StylesheetLoad</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<span class="xref">HtmlStylesheetLoadEventArgs</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
+  </div>
+  <div>
+      <span class="xref">Aprillz.MewUI.IVisualTreeHost</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MewExtendedToolkit.Html.ControlExtensions.html#MewExtendedToolkit_Html_ControlExtensions_LoadRtfFile_MewExtendedToolkit_Html_HtmlControl_System_IO_Stream_">ControlExtensions.LoadRtfFile(HtmlControl, Stream)</a>
+  </div>
+  <div>
+      <a class="xref" href="MewExtendedToolkit.Html.ControlExtensions.html#MewExtendedToolkit_Html_ControlExtensions_LoadRtfFile_MewExtendedToolkit_Html_HtmlControl_System_String_">ControlExtensions.LoadRtfFile(HtmlControl, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="MewExtendedToolkit.Html.ControlExtensions.html#MewExtendedToolkit_Html_ControlExtensions_LoadRtfText_MewExtendedToolkit_Html_HtmlControl_System_String_">ControlExtensions.LoadRtfText(HtmlControl, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="MewExtendedToolkit.Html.ControlExtensions.html#MewExtendedToolkit_Html_ControlExtensions_Text_MewExtendedToolkit_Html_HtmlControl_System_String_">ControlExtensions.Text(HtmlControl, string)</a>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/blob/main/MewExtendedToolkit/MewExtendedToolkit.Html/HtmlControl.cs/#L41" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Copyright (c) 2026 J&eacute;r&eacute;my Ansel
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
