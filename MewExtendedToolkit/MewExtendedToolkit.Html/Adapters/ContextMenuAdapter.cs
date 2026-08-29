@@ -49,8 +49,11 @@ internal sealed class ContextMenuAdapter : RContextMenu
             Text = text,
             IsEnabled = enabled
         };
-        item.Click += () => onClick(item, EventArgs.Empty);
+
+        //item.Click += () => onClick(item, EventArgs.Empty);
+
         _contextMenu.Items.Add(item);
+        throw new NotSupportedException("MenuItem.Click is not supported");
     }
 
     public override void RemoveLastDivider()

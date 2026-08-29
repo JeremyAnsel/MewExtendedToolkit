@@ -188,7 +188,7 @@ new Window()
                     .ShowDialog()),
             new Button()
                 .Content("Quit")
-                .OnClick(() => Application.Quit())
+                .OnClick(() => Application.Shutdown())
         )
     );
 

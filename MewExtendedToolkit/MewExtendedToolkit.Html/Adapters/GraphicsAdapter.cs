@@ -1,6 +1,6 @@
 ﻿using Aprillz.MewUI;
-using Aprillz.MewUI.Controls.Text;
 using Aprillz.MewUI.Rendering;
+using Aprillz.MewUI.Text;
 using MewExtendedToolkit.Html.Utilities;
 using TheArtOfDev.HtmlRenderer.Adapters;
 using TheArtOfDev.HtmlRenderer.Adapters.Entities;
@@ -87,15 +87,20 @@ internal sealed class GraphicsAdapter : RGraphics
     {
     }
 
-    private readonly TextMeasureCache _measureCache = new();
-
     public override RSize MeasureString(string str, RFont font)
     {
         var fontAdapter = (FontAdapter)font;
         var realFont = fontAdapter.Font;
+        uint dpi = Application.Current.AllWindows[0].GetDpi();
 
-        uint dpi = Application.Current.AllWindows.First().GetDpi();
-        Size size = _measureCache.Measure(Application.DefaultGraphicsFactory, dpi, realFont, str, TextWrapping.NoWrap, double.MaxValue);
+        ITextLayout layout = Application.DefaultGraphicsFactory.TextEngine.CreateLayout(new TextLayoutRequest
+        {
+            Text = str.AsMemory(),
+            Dpi = dpi,
+            DefaultStyle = new TextRunStyle(realFont.Family, realFont.Size, realFont.Weight, realFont.IsItalic)
+        });
+
+        Size size = layout.MeasuredSize;
         return Utils.Convert(size);
     }
 
@@ -133,8 +138,27 @@ internal sealed class GraphicsAdapter : RGraphics
 
     public override void DrawString(string str, RFont font, RColor color, RPoint point, RSize size, bool rtl)
     {
-        var bounds = new Rect(Utils.ConvertRound(point), Utils.ConvertRound(size));
-        _g?.DrawText(str, bounds, ((FontAdapter)font).Font, Utils.Convert(color));
+        var fontAdapter = (FontAdapter)font;
+        var realFont = fontAdapter.Font;
+        uint dpi = Application.Current.AllWindows[0].GetDpi();
+
+        ITextLayout layout = Application.DefaultGraphicsFactory.TextEngine.CreateLayout(new TextLayoutRequest
+        {
+            Text = str.AsMemory(),
+            Dpi = dpi,
+            DefaultStyle = new TextRunStyle(realFont.Family, realFont.Size, realFont.Weight, realFont.IsItalic),
+            Paragraph = new TextParagraphStyle
+            {
+                MaxWidth = size.Width,
+                MaxHeight = size.Height,
+                FlowDirection = rtl ? TextFlowDirection.RightToLeft : TextFlowDirection.LeftToRight
+            }
+        });
+
+        _g?.Text.Draw(layout, Utils.ConvertRound(point), new TextDrawOptions
+        {
+            Foreground = Utils.Convert(color)
+        });
     }
 
     public override RBrush GetTextureBrush(RImage image, RRect dstRect, RPoint translateTransformLocation)

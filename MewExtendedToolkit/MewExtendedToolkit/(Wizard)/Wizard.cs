@@ -16,6 +16,7 @@ public sealed class Wizard : Control
     {
         _pages.CollectionChanged += (s, e) => OnPagesCollectionChanged();
         CurrentPage.Changed += NotifyPageChanged;
+        BuildContent();
     }
 
     private void OnPagesCollectionChanged()
@@ -99,7 +100,6 @@ public sealed class Wizard : Control
 
     private void NotifyPageChanged()
     {
-        BuildContent();
         PageChanged?.Invoke();
     }
 
@@ -276,11 +276,7 @@ public sealed class Wizard : Control
         {
             var grid = new DockPanel();
             grid.Add(BuildToolbar().DockBottom());
-            if (CurrentPage.Value is not null)
-            {
-                grid.Add(CurrentPage.Value);
-            }
-
+            grid.Add(new Border().Bind(Border.ChildProperty, CurrentPage, t => t));
             return grid;
         });
 
