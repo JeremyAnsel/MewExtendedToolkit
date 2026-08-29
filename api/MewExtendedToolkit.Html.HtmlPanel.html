@@ -323,10 +323,13 @@ The control will handle mouse and keyboard events on it to support html text sel
       <span class="xref">Control.IsPressedProperty</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Control.SetPressed(bool)</a>
+      <span class="xref">Control.HasValidationErrorProperty</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Control.RegisterPart(string, UIElement)</a>
+      <span class="xref">Control.ValidationErrorsProperty</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Control.SetPressed(bool)</a>
     </div>
     <div>
       <span class="xref">Control.ComputeVisualState()</span>
@@ -365,16 +368,16 @@ The control will handle mouse and keyboard events on it to support html text sel
       <span class="xref">Control.OnVisualRootChanged(Element, Element)</span>
     </div>
     <div>
-      <span class="xref">Control.OnMewPropertyChanged(MewProperty)</span>
-    </div>
-    <div>
       <span class="xref">Control.OnFontCacheInvalidated(MewProperty)</span>
     </div>
     <div>
-      <span class="xref">Control.BeginTextMeasurement()</span>
+      <span class="xref">Control.GetTextRunStyle()</span>
     </div>
     <div>
-      <span class="xref">Control.GetFont(IGraphicsFactory)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">Control.MeasureEngineText(ReadOnlySpan&lt;char&gt;, double, TextWrapping)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">Control.DrawEngineText(IGraphicsContext, ReadOnlySpan&lt;char&gt;, Rect, Color, TextAlignment, TextAlignment, TextWrapping, TextTrimming, object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Control.PickAccentBorder(Theme, Color, in Control.VisualState, double)</a>
@@ -389,9 +392,6 @@ The control will handle mouse and keyboard events on it to support html text sel
       <span class="xref">Control.PickControlBackground(in Control.VisualState, Color)</span>
     </div>
     <div>
-      <span class="xref">Control.GetFont()</span>
-    </div>
-    <div>
       <span class="xref">Control.GetBorderVisualInset()</span>
     </div>
     <div>
@@ -402,6 +402,9 @@ The control will handle mouse and keyboard events on it to support html text sel
     </div>
     <div>
       <span class="xref">Control.OnMouseEnter()</span>
+    </div>
+    <div>
+      <span class="xref">Control.ResolveToolTipContent()</span>
     </div>
     <div>
       <span class="xref">Control.ToolTip</span>
@@ -434,6 +437,12 @@ The control will handle mouse and keyboard events on it to support html text sel
       <span class="xref">Control.IsPressed</span>
     </div>
     <div>
+      <span class="xref">Control.HasValidationError</span>
+    </div>
+    <div>
+      <span class="xref">Control.ValidationErrors</span>
+    </div>
+    <div>
       <span class="xref">Control.StyleName</span>
     </div>
     <div>
@@ -452,6 +461,9 @@ The control will handle mouse and keyboard events on it to support html text sel
       <span class="xref">TextElement.FontWeightProperty</span>
     </div>
     <div>
+      <span class="xref">TextElement.FontStyleProperty</span>
+    </div>
+    <div>
       <span class="xref">TextElement.Foreground</span>
     </div>
     <div>
@@ -462,6 +474,9 @@ The control will handle mouse and keyboard events on it to support html text sel
     </div>
     <div>
       <span class="xref">TextElement.FontWeight</span>
+    </div>
+    <div>
+      <span class="xref">TextElement.FontStyle</span>
     </div>
     <div>
       <span class="xref">FrameworkElement.ThemeProperty</span>
@@ -572,6 +587,9 @@ The control will handle mouse and keyboard events on it to support html text sel
       <span class="xref">UIElement.IsEnabledProperty</span>
     </div>
     <div>
+      <span class="xref">UIElement.IsEffectivelyEnabledProperty</span>
+    </div>
+    <div>
       <span class="xref">UIElement.IsFocusedProperty</span>
     </div>
     <div>
@@ -582,6 +600,9 @@ The control will handle mouse and keyboard events on it to support html text sel
     </div>
     <div>
       <span class="xref">UIElement.IsMouseCapturedProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.OpacityProperty</span>
     </div>
     <div>
       <span class="xref">UIElement.IsHitTestVisibleProperty</span>
@@ -612,6 +633,9 @@ The control will handle mouse and keyboard events on it to support html text sel
     </div>
     <div>
       <span class="xref">UIElement.OnParentChanged()</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.OnMewPropertyChanged(MewProperty)</span>
     </div>
     <div>
       <span class="xref">UIElement.MeasureCore(Size)</span>
@@ -659,9 +683,6 @@ The control will handle mouse and keyboard events on it to support html text sel
       <span class="xref">UIElement.OnEnabledChanged()</span>
     </div>
     <div>
-      <span class="xref">UIElement.SetTarget&lt;T&gt;(MewProperty&lt;T&gt;, T)</span>
-    </div>
-    <div>
       <span class="xref">UIElement.OnDragEnter(DragEventArgs)</span>
     </div>
     <div>
@@ -698,6 +719,9 @@ The control will handle mouse and keyboard events on it to support html text sel
       <span class="xref">UIElement.IsEffectivelyEnabled</span>
     </div>
     <div>
+      <span class="xref">UIElement.Opacity</span>
+    </div>
+    <div>
       <span class="xref">UIElement.IsHitTestVisible</span>
     </div>
     <div>
@@ -729,6 +753,12 @@ The control will handle mouse and keyboard events on it to support html text sel
     </div>
     <div>
       <span class="xref">UIElement.CanDrag</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.Transitions</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.Triggers</span>
     </div>
     <div>
       <span class="xref">UIElement.GotFocus</span>
@@ -830,6 +860,9 @@ The control will handle mouse and keyboard events on it to support html text sel
       <span class="xref">Element.InvalidateArrange()</span>
     </div>
     <div>
+      <span class="xref">Element.InvalidateArrangeForCurrentLayoutPass()</span>
+    </div>
+    <div>
       <span class="xref">Element.FindVisualRoot()</span>
     </div>
     <div>
@@ -857,6 +890,12 @@ The control will handle mouse and keyboard events on it to support html text sel
       <span class="xref">Element.ResolveInheritedValue&lt;T&gt;(MewProperty&lt;T&gt;)</span>
     </div>
     <div>
+      <span class="xref">Element.Commands</span>
+    </div>
+    <div>
+      <span class="xref">Element.InputMap</span>
+    </div>
+    <div>
       <span class="xref">Element.DesiredSize</span>
     </div>
     <div>
@@ -875,10 +914,22 @@ The control will handle mouse and keyboard events on it to support html text sel
       <span class="xref">Element.IsArrangeDirty</span>
     </div>
     <div>
+      <span class="xref">MewObject.OnValueSourceChanged(MewProperty)</span>
+    </div>
+    <div>
       <span class="xref">MewObject.GetValue&lt;T&gt;(MewProperty&lt;T&gt;)</span>
     </div>
     <div>
       <span class="xref">MewObject.SetValue&lt;T&gt;(MewProperty&lt;T&gt;, T)</span>
+    </div>
+    <div>
+      <span class="xref">MewObject.SetCurrentValue&lt;T&gt;(MewProperty&lt;T&gt;, T)</span>
+    </div>
+    <div>
+      <span class="xref">MewObject.CommitTargetValue&lt;T&gt;(MewProperty&lt;T&gt;, T)</span>
+    </div>
+    <div>
+      <span class="xref">MewObject.ClearLocalValue&lt;T&gt;(MewProperty&lt;T&gt;)</span>
     </div>
     <div>
       <span class="xref">MewObject.SetValue&lt;T&gt;(MewPropertyKey&lt;T&gt;, T)</span>
@@ -891,6 +942,21 @@ The control will handle mouse and keyboard events on it to support html text sel
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">MewObject.SetBinding&lt;TProp, TSource&gt;(MewProperty&lt;TProp&gt;, ObservableValue&lt;TSource&gt;, Func&lt;TSource, TProp&gt;, Func&lt;TProp, TSource&gt;, BindingMode?)</a>
+    </div>
+    <div>
+      <span class="xref">MewObject.SetBinding&lt;TRoot, T&gt;(MewProperty&lt;T&gt;, TRoot, BindingPath&lt;TRoot, T&gt;, BindingMode?, T)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">MewObject.SetBinding&lt;TProp, TRoot, TSource&gt;(MewProperty&lt;TProp&gt;, TRoot, BindingPath&lt;TRoot, TSource&gt;, Func&lt;TSource, TProp&gt;, Func&lt;TProp, TSource&gt;, BindingMode?, TProp)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">MewObject.SetBinding&lt;TSource, T&gt;(MewProperty&lt;T&gt;, TSource, Func&lt;TSource, T&gt;, Action&lt;TSource, T&gt;, BindingMode?, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">MewObject.SetBinding&lt;TProp, TSource, TValue&gt;(MewProperty&lt;TProp&gt;, TSource, Func&lt;TSource, TValue&gt;, Func&lt;TValue, TProp&gt;, Action&lt;TSource, TValue&gt;, Func&lt;TProp, TValue&gt;, BindingMode?, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">MewObject.SetBinding&lt;TSource, T&gt;(MewProperty&lt;T&gt;, TSource, Func&lt;TSource, ObservableValue&lt;T&gt;&gt;, BindingMode?)</a>
     </div>
     <div>
       <span class="xref">MewObject.ClearBinding&lt;T&gt;(MewProperty&lt;T&gt;)</span>

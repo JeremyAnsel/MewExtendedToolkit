@@ -191,7 +191,13 @@
       <span class="xref">ContentControl.ContentProperty</span>
     </div>
     <div>
+      <span class="xref">ContentControl.EffectiveContentProperty</span>
+    </div>
+    <div>
       <span class="xref">ContentControl.Content</span>
+    </div>
+    <div>
+      <span class="xref">ContentControl.EffectiveContent</span>
     </div>
     <div>
       <span class="xref">Control.BackgroundProperty</span>
@@ -221,6 +227,12 @@
       <span class="xref">Control.IsPressedProperty</span>
     </div>
     <div>
+      <span class="xref">Control.HasValidationErrorProperty</span>
+    </div>
+    <div>
+      <span class="xref">Control.ValidationErrorsProperty</span>
+    </div>
+    <div>
       <span class="xref">Control.ToolTip</span>
     </div>
     <div>
@@ -245,6 +257,12 @@
       <span class="xref">Control.IsPressed</span>
     </div>
     <div>
+      <span class="xref">Control.HasValidationError</span>
+    </div>
+    <div>
+      <span class="xref">Control.ValidationErrors</span>
+    </div>
+    <div>
       <span class="xref">Control.StyleName</span>
     </div>
     <div>
@@ -263,6 +281,9 @@
       <span class="xref">TextElement.FontWeightProperty</span>
     </div>
     <div>
+      <span class="xref">TextElement.FontStyleProperty</span>
+    </div>
+    <div>
       <span class="xref">TextElement.Foreground</span>
     </div>
     <div>
@@ -273,6 +294,9 @@
     </div>
     <div>
       <span class="xref">TextElement.FontWeight</span>
+    </div>
+    <div>
+      <span class="xref">TextElement.FontStyle</span>
     </div>
     <div>
       <span class="xref">FrameworkElement.WidthProperty</span>
@@ -362,6 +386,9 @@
       <span class="xref">UIElement.IsEnabledProperty</span>
     </div>
     <div>
+      <span class="xref">UIElement.IsEffectivelyEnabledProperty</span>
+    </div>
+    <div>
       <span class="xref">UIElement.IsFocusedProperty</span>
     </div>
     <div>
@@ -372,6 +399,9 @@
     </div>
     <div>
       <span class="xref">UIElement.IsMouseCapturedProperty</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.OpacityProperty</span>
     </div>
     <div>
       <span class="xref">UIElement.IsHitTestVisibleProperty</span>
@@ -443,6 +473,9 @@
       <span class="xref">UIElement.IsEffectivelyEnabled</span>
     </div>
     <div>
+      <span class="xref">UIElement.Opacity</span>
+    </div>
+    <div>
       <span class="xref">UIElement.IsHitTestVisible</span>
     </div>
     <div>
@@ -474,6 +507,12 @@
     </div>
     <div>
       <span class="xref">UIElement.CanDrag</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.Transitions</span>
+    </div>
+    <div>
+      <span class="xref">UIElement.Triggers</span>
     </div>
     <div>
       <span class="xref">UIElement.GotFocus</span>
@@ -566,6 +605,12 @@
       <span class="xref">Element.TranslateRect(Rect, Element)</span>
     </div>
     <div>
+      <span class="xref">Element.Commands</span>
+    </div>
+    <div>
+      <span class="xref">Element.InputMap</span>
+    </div>
+    <div>
       <span class="xref">Element.DesiredSize</span>
     </div>
     <div>
@@ -584,10 +629,31 @@
       <span class="xref">Element.IsArrangeDirty</span>
     </div>
     <div>
+      <span class="xref">MewObject.SetCurrentValue&lt;T&gt;(MewProperty&lt;T&gt;, T)</span>
+    </div>
+    <div>
+      <span class="xref">MewObject.ClearLocalValue&lt;T&gt;(MewProperty&lt;T&gt;)</span>
+    </div>
+    <div>
       <span class="xref">MewObject.SetBinding&lt;T&gt;(MewProperty&lt;T&gt;, ObservableValue&lt;T&gt;, BindingMode?)</span>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">MewObject.SetBinding&lt;TProp, TSource&gt;(MewProperty&lt;TProp&gt;, ObservableValue&lt;TSource&gt;, Func&lt;TSource, TProp&gt;, Func&lt;TProp, TSource&gt;, BindingMode?)</a>
+    </div>
+    <div>
+      <span class="xref">MewObject.SetBinding&lt;TRoot, T&gt;(MewProperty&lt;T&gt;, TRoot, BindingPath&lt;TRoot, T&gt;, BindingMode?, T)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">MewObject.SetBinding&lt;TProp, TRoot, TSource&gt;(MewProperty&lt;TProp&gt;, TRoot, BindingPath&lt;TRoot, TSource&gt;, Func&lt;TSource, TProp&gt;, Func&lt;TProp, TSource&gt;, BindingMode?, TProp)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">MewObject.SetBinding&lt;TSource, T&gt;(MewProperty&lt;T&gt;, TSource, Func&lt;TSource, T&gt;, Action&lt;TSource, T&gt;, BindingMode?, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">MewObject.SetBinding&lt;TProp, TSource, TValue&gt;(MewProperty&lt;TProp&gt;, TSource, Func&lt;TSource, TValue&gt;, Func&lt;TValue, TProp&gt;, Action&lt;TSource, TValue&gt;, Func&lt;TProp, TValue&gt;, BindingMode?, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">MewObject.SetBinding&lt;TSource, T&gt;(MewProperty&lt;T&gt;, TSource, Func&lt;TSource, ObservableValue&lt;T&gt;&gt;, BindingMode?)</a>
     </div>
     <div>
       <span class="xref">MewObject.ClearBinding&lt;T&gt;(MewProperty&lt;T&gt;)</span>
