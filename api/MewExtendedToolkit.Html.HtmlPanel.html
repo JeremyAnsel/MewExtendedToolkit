@@ -314,12 +314,6 @@ The control will handle mouse and keyboard events on it to support html text sel
       <span class="xref">Control.PaddingProperty</span>
     </div>
     <div>
-      <span class="xref">Control.ToolTipProperty</span>
-    </div>
-    <div>
-      <span class="xref">Control.ContextMenuProperty</span>
-    </div>
-    <div>
       <span class="xref">Control.IsPressedProperty</span>
     </div>
     <div>
@@ -374,10 +368,10 @@ The control will handle mouse and keyboard events on it to support html text sel
       <span class="xref">Control.GetTextRunStyle()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">Control.MeasureEngineText(ReadOnlySpan&lt;char&gt;, double, TextWrapping)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">Control.MeasureEngineText(ReadOnlySpan&lt;char&gt;, double, TextWrapping, bool)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">Control.DrawEngineText(IGraphicsContext, ReadOnlySpan&lt;char&gt;, Rect, Color, TextAlignment, TextAlignment, TextWrapping, TextTrimming, object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">Control.DrawEngineText(IGraphicsContext, ReadOnlySpan&lt;char&gt;, Rect, Color, TextAlignment, TextAlignment, TextWrapping, TextTrimming, object, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Control.PickAccentBorder(Theme, Color, in Control.VisualState, double)</a>
@@ -399,18 +393,6 @@ The control will handle mouse and keyboard events on it to support html text sel
     </div>
     <div>
       <span class="xref">Control.DrawBackgroundAndBorder(IGraphicsContext, Rect, Color, Color, Thickness, CornerRadius)</span>
-    </div>
-    <div>
-      <span class="xref">Control.OnMouseEnter()</span>
-    </div>
-    <div>
-      <span class="xref">Control.ResolveToolTipContent()</span>
-    </div>
-    <div>
-      <span class="xref">Control.ToolTip</span>
-    </div>
-    <div>
-      <span class="xref">Control.ContextMenu</span>
     </div>
     <div>
       <span class="xref">Control.Background</span>
@@ -512,6 +494,18 @@ The control will handle mouse and keyboard events on it to support html text sel
       <span class="xref">FrameworkElement.TagProperty</span>
     </div>
     <div>
+      <span class="xref">FrameworkElement.ToolTipProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.ContextMenuProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.OnMouseEnter()</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.ResolveToolTipContent()</span>
+    </div>
+    <div>
       <span class="xref">FrameworkElement.GetDpi()</span>
     </div>
     <div>
@@ -534,6 +528,12 @@ The control will handle mouse and keyboard events on it to support html text sel
     </div>
     <div>
       <span class="xref">FrameworkElement.StyleSheet</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.ToolTip</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.ContextMenu</span>
     </div>
     <div>
       <span class="xref">FrameworkElement.Width</span>
@@ -1341,7 +1341,7 @@ The control will handle mouse and keyboard events on it to support html text sel
     <pre><code class="lang-csharp hljs">protected override void OnDispose()</code></pre>
   </div>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Aprillz.MewUI.Controls.Control.OnDispose()</span></div>
+  <div><span class="xref">Aprillz.MewUI.Controls.FrameworkElement.OnDispose()</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlPanel_OnDpiChanged_System_UInt32_System_UInt32_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlPanel.OnDpiChanged(System.UInt32%2CSystem.UInt32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>

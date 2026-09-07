@@ -234,12 +234,6 @@ Raised when an error occurred during html rendering.<br>
       <span class="xref">Control.PaddingProperty</span>
     </div>
     <div>
-      <span class="xref">Control.ToolTipProperty</span>
-    </div>
-    <div>
-      <span class="xref">Control.ContextMenuProperty</span>
-    </div>
-    <div>
       <span class="xref">Control.IsPressedProperty</span>
     </div>
     <div>
@@ -297,10 +291,10 @@ Raised when an error occurred during html rendering.<br>
       <span class="xref">Control.GetTextRunStyle()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">Control.MeasureEngineText(ReadOnlySpan&lt;char&gt;, double, TextWrapping)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">Control.MeasureEngineText(ReadOnlySpan&lt;char&gt;, double, TextWrapping, bool)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">Control.DrawEngineText(IGraphicsContext, ReadOnlySpan&lt;char&gt;, Rect, Color, TextAlignment, TextAlignment, TextWrapping, TextTrimming, object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">Control.DrawEngineText(IGraphicsContext, ReadOnlySpan&lt;char&gt;, Rect, Color, TextAlignment, TextAlignment, TextWrapping, TextTrimming, object, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">Control.OnDpiChanged(uint, uint)</a>
@@ -325,21 +319,6 @@ Raised when an error occurred during html rendering.<br>
     </div>
     <div>
       <span class="xref">Control.DrawBackgroundAndBorder(IGraphicsContext, Rect, Color, Color, Thickness, CornerRadius)</span>
-    </div>
-    <div>
-      <span class="xref">Control.OnMouseEnter()</span>
-    </div>
-    <div>
-      <span class="xref">Control.OnDispose()</span>
-    </div>
-    <div>
-      <span class="xref">Control.ResolveToolTipContent()</span>
-    </div>
-    <div>
-      <span class="xref">Control.ToolTip</span>
-    </div>
-    <div>
-      <span class="xref">Control.ContextMenu</span>
     </div>
     <div>
       <span class="xref">Control.Background</span>
@@ -441,10 +420,25 @@ Raised when an error occurred during html rendering.<br>
       <span class="xref">FrameworkElement.TagProperty</span>
     </div>
     <div>
+      <span class="xref">FrameworkElement.ToolTipProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.ContextMenuProperty</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.OnMouseEnter()</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.ResolveToolTipContent()</span>
+    </div>
+    <div>
       <span class="xref">FrameworkElement.GetDpi()</span>
     </div>
     <div>
       <span class="xref">FrameworkElement.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.OnDispose()</span>
     </div>
     <div>
       <span class="xref">FrameworkElement.GetSnappedBorderBounds(Rect)</span>
@@ -466,6 +460,12 @@ Raised when an error occurred during html rendering.<br>
     </div>
     <div>
       <span class="xref">FrameworkElement.StyleSheet</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.ToolTip</span>
+    </div>
+    <div>
+      <span class="xref">FrameworkElement.ContextMenu</span>
     </div>
     <div>
       <span class="xref">FrameworkElement.Width</span>
@@ -1733,7 +1733,7 @@ Note: to get the screen rectangle you need to adjust by the hosting control.<br>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Aprillz.MewUI.Controls.Control.OnKeyDown(Aprillz.MewUI.KeyEventArgs)</span></div>
+  <div><span class="xref">Aprillz.MewUI.Controls.FrameworkElement.OnKeyDown(Aprillz.MewUI.KeyEventArgs)</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_OnLinkClicked_TheArtOfDev_HtmlRenderer_Core_Entities_HtmlLinkClickedEventArgs_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.OnLinkClicked(TheArtOfDev.HtmlRenderer.Core.Entities.HtmlLinkClickedEventArgs)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
@@ -1869,7 +1869,7 @@ Note: to get the screen rectangle you need to adjust by the hosting control.<br>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Aprillz.MewUI.Controls.Control.OnMouseDown(Aprillz.MewUI.MouseEventArgs)</span></div>
+  <div><span class="xref">Aprillz.MewUI.Controls.FrameworkElement.OnMouseDown(Aprillz.MewUI.MouseEventArgs)</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_OnMouseLeave.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.OnMouseLeave%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
@@ -1887,7 +1887,7 @@ Note: to get the screen rectangle you need to adjust by the hosting control.<br>
     <pre><code class="lang-csharp hljs">protected override void OnMouseLeave()</code></pre>
   </div>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Aprillz.MewUI.Controls.Control.OnMouseLeave()</span></div>
+  <div><span class="xref">Aprillz.MewUI.Controls.FrameworkElement.OnMouseLeave()</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_OnMouseMove_Aprillz_MewUI_MouseEventArgs_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.OnMouseMove(Aprillz.MewUI.MouseEventArgs)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
@@ -1922,7 +1922,7 @@ Note: to get the screen rectangle you need to adjust by the hosting control.<br>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Aprillz.MewUI.Controls.Control.OnMouseMove(Aprillz.MewUI.MouseEventArgs)</span></div>
+  <div><span class="xref">Aprillz.MewUI.Controls.FrameworkElement.OnMouseMove(Aprillz.MewUI.MouseEventArgs)</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/JeremyAnsel/MewExtendedToolkit/new/main/apiSpec/new?filename=MewExtendedToolkit_Html_HtmlControl_OnMouseUp_Aprillz_MewUI_MouseEventArgs_.md&amp;value=---%0Auid%3A%20MewExtendedToolkit.Html.HtmlControl.OnMouseUp(Aprillz.MewUI.MouseEventArgs)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
