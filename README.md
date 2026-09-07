@@ -41,6 +41,10 @@ new AboutBox()
 .ShowDialog()
 ```
 
+Screenshot:
+
+![AboutBox](https://github.com/JeremyAnsel/MewExtendedToolkit/Images/AboutBox.png)
+
 ### InputBox
 
 To show an InputBox:
@@ -48,6 +52,10 @@ To show an InputBox:
 ```csharp
 InputBox.ShowPrompt("Title", "Message", "placeholder text")
 ```
+
+Screenshot:
+
+![InputBox](https://github.com/JeremyAnsel/MewExtendedToolkit/Images/InputBox.png)
 
 ### TransformBox
 
@@ -61,6 +69,10 @@ new TransformBox()
 .Child(new TextBlock().FontSize(48).Text("Hello, World!"))
 ```
 
+Screenshot:
+
+![TransformBox](https://github.com/JeremyAnsel/MewExtendedToolkit/Images/TransformBox.png)
+
 ### Wizard
 
 To create a Wizard:
@@ -72,6 +84,10 @@ new Wizard()
 .Add(new WizardPage("Page 2 Title", "Page 2 Description"))
 .Add(new WizardPage("Finish Page Title", "Finish Page Description").CanFinish())
 ```
+
+Screenshot:
+
+![Wizard](https://github.com/JeremyAnsel/MewExtendedToolkit/Images/Wizard.png)
 
 ## MewExtendedToolkit.Html Controls
 
@@ -89,6 +105,10 @@ new HtmlLabel()
 .Text("<html><body><div style=\"color: green; font-size: 48px;\">Hello, <b>World</b><i>!</i></div></body></html>")
 ```
 
+Screenshot:
+
+![HtmlLabel](https://github.com/JeremyAnsel/MewExtendedToolkit/Images/HtmlLabel.png)
+
 ### HtmlPanel
 
 To show a HtmlPanel:
@@ -105,6 +125,10 @@ new HtmlPanel().LoadRtfText(text);
 new HtmlPanel().LoadRtfFile(fileName);
 new HtmlPanel().LoadRtfFile(stream);
 ```
+
+Screenshot:
+
+![HtmlPanel](https://github.com/JeremyAnsel/MewExtendedToolkit/Images/HtmlPanel.png)
 
 ## Sample
 
