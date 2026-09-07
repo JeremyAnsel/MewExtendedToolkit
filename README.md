@@ -43,7 +43,7 @@ new AboutBox()
 
 Screenshot:
 
-![AboutBox](https://github.com/JeremyAnsel/MewExtendedToolkit/Images/AboutBox.png)
+![AboutBox](Images/AboutBox.png)
 
 ### InputBox
 
@@ -55,7 +55,7 @@ InputBox.ShowPrompt("Title", "Message", "placeholder text")
 
 Screenshot:
 
-![InputBox](https://github.com/JeremyAnsel/MewExtendedToolkit/Images/InputBox.png)
+![InputBox](Images/InputBox.png)
 
 ### TransformBox
 
@@ -71,7 +71,7 @@ new TransformBox()
 
 Screenshot:
 
-![TransformBox](https://github.com/JeremyAnsel/MewExtendedToolkit/Images/TransformBox.png)
+![TransformBox](Images/TransformBox.png)
 
 ### Wizard
 
@@ -87,7 +87,7 @@ new Wizard()
 
 Screenshot:
 
-![Wizard](https://github.com/JeremyAnsel/MewExtendedToolkit/Images/Wizard.png)
+![Wizard](Images/Wizard.png)
 
 ## MewExtendedToolkit.Html Controls
 
@@ -107,7 +107,7 @@ new HtmlLabel()
 
 Screenshot:
 
-![HtmlLabel](https://github.com/JeremyAnsel/MewExtendedToolkit/Images/HtmlLabel.png)
+![HtmlLabel](Images/HtmlLabel.png)
 
 ### HtmlPanel
 
@@ -128,7 +128,7 @@ new HtmlPanel().LoadRtfFile(stream);
 
 Screenshot:
 
-![HtmlPanel](https://github.com/JeremyAnsel/MewExtendedToolkit/Images/HtmlPanel.png)
+![HtmlPanel](Images/HtmlPanel.png)
 
 ## Sample
 
