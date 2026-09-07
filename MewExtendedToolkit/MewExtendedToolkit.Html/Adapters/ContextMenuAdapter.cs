@@ -66,7 +66,7 @@ internal sealed class ContextMenuAdapter : RContextMenu
 
     public override void Show(RControl parent, RPoint location)
     {
-        _contextMenu.ShowAt(((ControlAdapter)parent).Control, Utils.ConvertRound(location));
+        _contextMenu.Show(((ControlAdapter)parent).Control, Utils.ConvertRound(location));
     }
 
     public override void Dispose()
